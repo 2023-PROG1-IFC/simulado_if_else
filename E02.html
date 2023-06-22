@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA: Compra na Feira
     //Considere que a pessoa foi até a feira e realizou algumas compras, sendo:
@@ -9,11 +10,28 @@
     //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
     //ENTRADA
+    const a = Number(prompt('Qual o preço da unidade do Mamão?').replace(',', '.').trim());
+    const b = Number(prompt('Qual o preço do kilo do Melancia?').replace(',', '.').trim());
+    const c = Number(prompt('Qual o preço da unidade do Abacate?').replace(',', '.').trim());
+    const d = Number(prompt('Qual o preço do kilo da Cebola?').replace(',', '.').trim());
+    const e = Number(prompt('Quanto dinheiro vocẽ tem?').replace(',', '.').trim());
 
-
+    const aa = 5;
+    const ba = 3;
+    const ca = 4;
+    const da = 1.1;
     //PROCESSAMENTO
 
-
+    const f = (a * aa) + (b * ba) + (c * ca) + (d * da);
+    var g = e - f;
+    if (e > f) {
+        alert(`Você tem dinheiro para pagar! sobrara R$${g}`)
+    } else if (e < f) {
+        g = g * -1;
+        alert(`Você não tera dinheiro para pagar, faltara R$${g}`)
+    } else {
+        alert('Parametros invalidos!');
+    }
     //SAÍDA
 
 </script>

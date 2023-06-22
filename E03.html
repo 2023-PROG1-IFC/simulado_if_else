@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA: Viajar para algum lugar
     //Peça para o usuário informar para qual estado deseja realizar a viagem. (Rio Grande do Sul-RS ou Minas Gerais-MG). Peça também para informar quantos dias ficará em viagem. O usuário também deverá informar "quantos dinheiros" (R$) possui para gastar na viagem.
@@ -7,11 +8,26 @@
     //Calcule se o usuário possui dinheiro suficiente para realizar a viagem para o destino que pretende. Se o usuário puder viajar, o programa apresentará a mensagem "Boa viagem" e quantos dias poderá ficar no destino, além de qual será o custo da viagem. Caso não possa viajar o programa apresentará a mensagem "Sem Férias" e também apresentará "quantos dinheiros" (R$) estão faltando para realizar a viagem.
 
     //ENTRADA
-
+    var a = prompt('Para qual estado você vai? (RS = Rio Grande do Sul ou MG = Minas Gerais)').trim().toLocaleLowerCase();
+    var b = Math.floor(prompt('Quantos dias você vai ficar?').replace(',','.').trim().toLocaleLowerCase());
+    var c = prompt('Quantos Dinheiros vocẽ tem?').replace(',','.').trim().toLocaleLowerCase();
 
     //PROCESSAMENTO
+        var d = null;
+        if(a == 'rs'){
+            var d = 180;        
+        } else if(a = 'mg'){
+            var d = 210;
+        }
+        var e = d * b;
+        if(d != null && c >= e){
+            alert('vai');
+        } else if (e < c) {
+            alert('n vai');
+        } else {
+            alert('Parametros invalidos!');
+        }
 
 
-    //SAÍDA
 
 </script>
